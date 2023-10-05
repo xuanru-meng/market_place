@@ -330,9 +330,7 @@ function total_price(){
     
 }
 
-/// finish total_price functions ///
 
-/// Begin getProducts(); functions ///
 
 function getProducts(){
 

@@ -2,6 +2,10 @@
 
     $active='Shop';
     include("includes/header.php");
+    echo "<script>window.addEventListener('load', function(){
+        let value = window.scrollY;
+        console.log(value);
+        });</script>";
 
 ?>
    
@@ -146,6 +150,10 @@
     </script>
 
     <script>
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            console.log('current: '+value);
+        });
     
         $(document).ready(function(){
 

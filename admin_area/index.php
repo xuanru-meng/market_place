@@ -2,7 +2,7 @@
 
     session_start();
     include("includes/db.php");
-    
+
     if(!isset($_SESSION['admin_email'])){
         
         echo "<script>window.open('login.php','_self')</script>";
@@ -70,9 +70,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+        <!-- <script>
+                alert("Hello, World!");
+                window.addEventListener("load", function(){
+                let value = window.scrollY;
+                console.log(value);
+                });
+        </script> -->
 
     <div id="wrapper">
-       
        <?php include("includes/sidebar.php"); ?>
        
         <div id="page-wrapper">
@@ -166,10 +172,11 @@
                 
             </div><!-- container-fluid finish -->
         </div><!-- #page-wrapper finish -->
-    </div><!-- wrapper finish -->
+    </div>
 
-<script src="js/jquery-331.min.js"></script>     
-<script src="js/bootstrap-337.min.js"></script>       
+<!-- <script src="js/jquery-331.min.js"></script>     
+<script src="js/bootstrap-337.min.js"></script>   -->
+
 </body>
 </html>
 
