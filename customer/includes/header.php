@@ -57,74 +57,7 @@ if(isset($_GET['pro_id'])){
 </head>
 <body>
    
-   <div id="top"><!-- Top Begin -->
-       
-       <div class="container"><!-- container Begin -->
-           
-           <div class="col-md-6 offer"><!-- col-md-6 offer Begin -->
-               
-               <a href="#" class="btn btn-success btn-sm">
-                   
-                   <?php 
-                   
-                   if(!isset($_SESSION['customer_email'])){
-                       
-                       echo "Welcome: Guest";
-                       
-                   }else{
-                       
-                       echo "Welcome: " . $_SESSION['customer_email'] . "";
-                       
-                   }
-                   
-                   ?>
-               
-               </a>
-               <a href="checkout.php"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
-               
-           </div><!-- col-md-6 offer Finish -->
-           
-           <div class="col-md-6"><!-- col-md-6 Begin -->
-               
-               <ul class="menu"><!-- cmenu Begin -->
-                   
-                   <li>
-                       <a href="../customer_register.php">Register</a>
-                   </li>
-                   <li>
-                       <a href="my_account.php">My Account</a>
-                   </li>
-                   <li>
-                       <a href="../cart.php">Go To Cart</a>
-                   </li>
-                   <li>
-                       <a href="../checkout.php">
-                       
-                        <?php 
-                           
-                           if(!isset($_SESSION['customer_email'])){
-                       
-                                echo "<a href='checkout.php'> Login </a>";
 
-                               }else{
-
-                                echo " <a href='logout.php'> Log Out </a> ";
-
-                               }
-                           
-                         ?>
-                       
-                       </a>
-                   </li>
-                   
-               </ul><!-- menu Finish -->
-               
-           </div><!-- col-md-6 Finish -->
-           
-       </div><!-- container Finish -->
-       
-   </div><!-- Top Finish -->
-   
    <div id="navbar" class="navbar navbar-default"><!-- navbar navbar-default Begin -->
        
        <div class="container"><!-- container Begin -->
@@ -167,9 +100,6 @@ if(isset($_GET['pro_id'])){
                        </li>
                        <li>
                            <a href="../shop.php">Shop</a>
-                       </li>
-                       <li class="active">
-                           <a href="my_account.php">My Account</a>
                        </li>
                        <li>
                            <a href="../cart.php">Shopping Cart</a>

@@ -26,16 +26,14 @@
                <ul class="menu"><!-- cmenu Begin -->
                    
                    <li>
-                       <a href="customer_register.php">Register</a>
+                        <a href="customer_login.php" class="top_button">
+                            <img src="images/person.svg" height=50 width=50 alt="person img">
+                        </a>
                    </li>
                    <li>
-                       <a href="checkout.php">My Account</a>
-                   </li>
-                   <li>
-                       <a href="cart.php">Go To Cart</a>
-                   </li>
-                   <li>
-                       <a href="checkout.php">Login</a>
+                        <a href="cart.php" class="top_button">
+                            <img src="images/cart.svg"  height=50 width=50 alt="cart img">
+                        </a>
                    </li>
                    
                </ul><!-- menu Finish -->
@@ -88,9 +86,6 @@
                        </li>
                        <li>
                            <a href="shop.php">Shop</a>
-                       </li>
-                       <li>
-                           <a href="checkout.php">My Account</a>
                        </li>
                        <li>
                            <a href="cart.php">Shopping Cart</a>
