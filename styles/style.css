@@ -22,6 +22,21 @@ body{
     background: #fae7e4;
     padding: 10px 0;
 }
+
+.top_button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.top_button.right:hover,
+.top_button.right:focus,
+.top_button.right:active {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
 #top .offer{
     color: #ffffff;
 }

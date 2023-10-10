@@ -7,18 +7,7 @@
    
    <div id="content"><!-- #content Begin -->
        <div class="container"><!-- container Begin -->
-           <div class="col-md-12"><!-- col-md-12 Begin -->
-               
-               <ul class="breadcrumb"><!-- breadcrumb Begin -->
-                   <li>
-                       <a href="index.php">Home</a>
-                   </li>
-                   <li>
-                       Cart
-                   </li>
-               </ul><!-- breadcrumb Finish -->
-               
-           </div><!-- col-md-12 Finish -->
+
            
            <div id="cart" class="col-md-9"><!-- col-md-9 Begin -->
                

@@ -25,12 +25,6 @@ include("functions/functions.php");
            
            <div class="navbar-header"><!-- navbar-header Begin -->
                
-               <a href="index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
-                   
-                   <img src="images/ecom-store-logo.png" alt="M-dev-Store Logo" class="hidden-xs">
-                   <img src="images/ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs">
-                   
-               </a><!-- navbar-brand home Finish -->
                
                <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
                    
@@ -39,14 +33,6 @@ include("functions/functions.php");
                    <i class="fa fa-align-justify"></i>
                    
                </button>
-
-                <button href="customer_login.php" class="top_button">
-                    <img src="images/person.svg" height=50 width=50 alt="person img">
-                </button>
-
-                <button href="cart.php" class="top_button">
-                    <img src="images/cart.svg"  height=50 width=50 alt="cart img">
-                </button>
 
                
                <button class="navbar-toggle" data-toggle="collapse" data-target="#search">
@@ -60,44 +46,24 @@ include("functions/functions.php");
            </div><!-- navbar-header Finish -->
            
            <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
-               
-               <div class="padding-nav"><!-- padding-nav Begin -->
-                   
-                   <ul class="nav navbar-nav left"><!-- nav navbar-nav left Begin -->
-                       
-                       <li class="<?php if($active=='Home') echo"active"; ?>">
-                           <a href="index.php">Home</a>
-                       </li>
-                       <li class="<?php if($active=='Shop') echo"active"; ?>">
-                           <a href="shop.php">Shop</a>
-                       </li>
 
-                       <li class="<?php if($active=='Cart') echo"active"; ?>">
-                           <a href="cart.php">Shopping Cart</a>
-                       </li>
-                       <li class="<?php if($active=='Contact') echo"active"; ?>">
-                           <a href="contact.php">Contact Us</a>
-                       </li>
-                       
-                   </ul><!-- nav navbar-nav left Finish -->
-                   
-               </div><!-- padding-nav Finish -->
-               
-               <a href="cart.php" class="btn navbar-btn btn-primary right"><!-- btn navbar-btn btn-primary Begin -->
-                   
-                   <i class="fa fa-shopping-cart"></i>
-                   
-                   <span><?php items(); ?> Items In Your Cart</span>
-                   
-               </a><!-- btn navbar-btn btn-primary Finish -->
+                <a href="index.php" class="top_button right">
+                    <img src="images/shop.svg" height=50 width=50 alt="shop img">
+                </a>
+
+               <a href="customer/customer_login.php" class="top_button right">
+                    <img src="images/person.svg" height=50 width=50 alt="person img">
+                </a>
+
+                <a href="cart.php" class="top_button right">
+                    <img src="images/cart.svg"  height=50 width=50 alt="cart img">
+                </a>
                
                <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
                    
-                   <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
-                       
+                   <button class="top_button right" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
+                        <img src="images/search.svg" height=40 width=40 alt="search img">
                        <span class="sr-only">Toggle Search</span>
-                       
-                       <i class="fa fa-search"></i>
                        
                    </button><!-- btn btn-primary navbar-btn Finish -->
                    

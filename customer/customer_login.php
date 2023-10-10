@@ -1,3 +1,9 @@
+<?php 
+
+    include("includes/header.php");
+
+?>
+
 <div class="box"><!-- box Begin -->
     
   <div class="box-header"><!-- box-header Begin -->
@@ -53,6 +59,8 @@
      </a> 
       
   </center><!-- center Finish -->
+  <script src="js/jquery-331.min.js"></script>
+<script src="js/bootstrap-337.min.js"></script>
     
 </div><!-- box Finish -->
 
@@ -112,3 +120,4 @@
 // }
 
 ?>
+
