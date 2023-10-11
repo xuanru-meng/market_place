@@ -1,6 +1,6 @@
 <?php 
 
-    include("includes/header.php");
+    include("../includes/header.php");
 
 ?>
 
@@ -18,7 +18,7 @@
           
       </center><!-- center Finish -->
       
-  </div><!-- box-header Finish -->
+  </div>
    
   <form method="post" action="checkout.php"><!-- form Begin -->
       
