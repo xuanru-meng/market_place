@@ -1,10 +1,6 @@
 <?php 
     
-    if(!isset($_SESSION['admin_email'])){
-        
-        echo "<script>window.open('login.php','_self')</script>";
-        
-    }else{
+    include("login_check.php");
 
 ?> 
 
@@ -356,4 +352,4 @@
 </div><!-- row no: 3 finish -->
 
 
-<?php } ?>
+<?php  ?>

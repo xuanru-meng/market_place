@@ -28,35 +28,24 @@
                    <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
                    <li data-target="#myCarousel" data-slide-to="1"></li>
                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                   <li data-target="#myCarousel" data-slide-to="3"></li>
                    
                </ol><!-- carousel-indicators Finish -->
                
                <div class="carousel-inner"><!-- carousel-inner Begin -->
                    
+                   
+                   <div class="item">
+                       
+                       <img src="admin_area/slides_images/slide-2.jpeg" height = 1000 width = 1000 alt="Slider Image 2">
+                       
+                   </div>
+                   
                    <div class="item active">
-                       
-                       <img src="admin_area/slides_images/slide-1.jpg" alt="Slider Image 1">
-                       
-                   </div>
-                   
-                   <div class="item">
-                       
-                       <img src="admin_area/slides_images/slide-2.jpg" alt="Slider Image 2">
-                       
-                   </div>
-                   
-                   <div class="item">
                        
                        <img src="admin_area/slides_images/slide-3.jpg" alt="Slider Image 3">
                        
                    </div>
                    
-                   <div class="item">
-                       
-                       <img src="admin_area/slides_images/slide-4.jpg" alt="Slider Image 4">
-                       
-                   </div>
                    
                </div><!-- carousel-inner Finish -->
                

@@ -1,22 +1,24 @@
 <?php 
 
-    include("../includes/header.php");
+    include("includes/header.php");
 
 ?>
-
-<div class="box"><!-- box Begin -->
+<div class="container"><!-- container Begin -->
+    <div class="col-md-12"><!-- col-md-12 Begin -->
+        <div class="box"><!-- box Begin -->
     
-  <div class="box-header"><!-- box-header Begin -->
-      
-      <center><!-- center Begin -->
-          
-          <h1> Login </h1>
-          
-          <p class="lead"> Already have our account..? </p>
-           
-      </center><!-- center Finish -->
-      
-  </div>
+        <div class="box-header"><!-- box-header Begin -->
+            
+            <center><!-- center Begin -->
+                
+                <h1 class="bold-title"> Login </h1>
+                
+                <p class="lead"> Already have our account..? </p>
+                
+
+            </center><!-- center Finish -->
+            
+        </div>
    
   <form method="post" action="checkout.php"><!-- form Begin -->
       
@@ -40,7 +42,7 @@
           
           <button name="login" value="Login" class="btn btn-primary">
               
-              <i class="fa fa-sign-in"></i> Login
+              <i class="fa fa-sign-in" style="color: #9FD4A3;"></i> Login
               
           </button>
           
@@ -50,9 +52,10 @@
    
   <center><!-- center Begin -->
       
-     <a href="customer_register.php">
          
-         <h3> Dont have account..? Register here </h3>
+         <h3 class = "small-title"> don't have an account yet? </h3>
+         <a href="customer_register.php">
+         <h3 class = "small-title—click"> Create account </h3>
          
      </a> 
       
@@ -61,12 +64,13 @@
 <script src="js/bootstrap-337.min.js"></script>
     
 </div><!-- box Finish -->
-
+</div>
+</div>
 
 <?php 
 
 
-// if(isset($_POST['login'])){
+if(isset($_POST['login'])){
 
     $customer_email = $_POST['c_email'];
     
@@ -115,7 +119,7 @@
         
     }
     
-// }
+}
 
 ?>
 

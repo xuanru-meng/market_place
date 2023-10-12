@@ -337,59 +337,7 @@ function getProducts(){
     global $db;
     $aWhere = array();
 
-    /// Begin for Manufacturer ///
-    
-    if(isset($_REQUEST['man'])&&is_array($_REQUEST['man'])){
 
-        foreach($_REQUEST['man'] as $sKey=>$sVal){
-
-            if((int)$sVal!=0){
-
-                $aWhere[] = 'manufacturer_id='.(int)$sVal;
-
-            }
-
-        }
-
-    }
-
-    /// Finish for Manufacturer ///  
-
-    /// Begin for Product Categories /// 
-
-    if(isset($_REQUEST['p_cat'])&&is_array($_REQUEST['p_cat'])){
-
-        foreach($_REQUEST['p_cat'] as $sKey=>$sVal){
-
-            if((int)$sVal!=0){
-
-                $aWhere[] = 'p_cat_id='.(int)$sVal;
-
-            }
-
-        }
-
-    }    
-
-    /// Finish for Product Categories /// 
-
-    /// Begin for Categories /// 
-
-    if(isset($_REQUEST['cat'])&&is_array($_REQUEST['cat'])){
-
-        foreach($_REQUEST['cat'] as $sKey=>$sVal){
-
-            if((int)$sVal!=0){
-
-                $aWhere[] = 'cat_id='.(int)$sVal;
-
-            }
-
-        }
-
-    }    
-
-    /// Finish for Categories /// 
 
     $per_page=6;
 
@@ -430,36 +378,9 @@ function getProducts(){
 
         $manufacturer_title = $row_manufacturer['manufacturer_title'];
 
-        if($pro_label == "sale"){
+        $product_price = " $ $pro_price ";
 
-            $product_price = " <del> $ $pro_price </del> ";
 
-            $product_sale_price = "/ $ $pro_sale_price ";
-
-        }else{
-
-            $product_price = "  $ $pro_price  ";
-
-            $product_sale_price = "";
-
-        }
-
-        if($pro_label == ""){
-
-        }else{
-
-            $product_label = "
-            
-                <a href='#' class='label $pro_label'>
-                
-                    <div class='theLabel'> $pro_label </div>
-                    <div class='labelBackground'>  </div>
-                
-                </a>
-            
-            ";
-
-        }
         
         echo "
         
@@ -473,29 +394,21 @@ function getProducts(){
                 
                 </a>
                 
-                <div class='text'>
-
-                <center>
-                
-                    <p class='btn btn-primary'> $manufacturer_title </p>
-                
-                </center>
+                <div class='small-title'>
                 
                     <h3>
             
                         <a href='details.php?pro_id=$pro_id'>
-
-                            $pro_title
-
+                        <div class = 'product-title'>
+                                <span style='flex: 4;'>$pro_title</span>
+                                <span style='flex: 1;'>$product_price</span>
+                        </div>
+ 
                         </a>
                     
                     </h3>
                     
-                    <p class='price'>
-                    
-                    $product_price &nbsp;$product_sale_price
-                    
-                    </p>
+
                     
                     <p class='button'>
                     

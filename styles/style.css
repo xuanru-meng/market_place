@@ -11,25 +11,30 @@ Theme Ver         : 1.1
 body{
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333333;
-    background: #f0f0f0;
+    background:  #e9f8ee;
     overflow-x: hidden;
 }
 
 /* Top Styles */
 
 #top{
-    background: #fae7e4;
+    background: rgba(65, 179, 156, 0);
+    color:  rgba(65, 179, 156, 0);
     padding: 10px 0;
 }
+
 
 .top_button {
     background-color: transparent;
     border: none;
     outline: none;
+    margin: 10px;
 }
 
-.top_button.right:hover,
+.top_button.right:hover {
+    background-color: #d5f5d1;
+}
+
 .top_button.right:focus,
 .top_button.right:active {
     background-color: transparent;
@@ -84,11 +89,17 @@ body{
 /* Header Styles */
 
 .navbar{
+    background: #d5f5d1;
+}
+
+.navbar:hover{
     background: #ffffff;
 }
+
 .navbar-collapse .right{
     float: right;
 }
+
 .navbar-brand{
     float: left;
     padding: 10px 15px;
@@ -96,7 +107,40 @@ body{
     line-height: 20px;
     height: 70px;
 }
-.navbar-brand:hover,
+
+.bold-title{
+    color:rgb(58, 149, 107);
+    font-weight: bold;
+}
+
+.small-title{
+    color:rgb(58, 149, 107);
+    font-size: 18px; 
+}
+
+.product-title{
+    color:rgb(28, 114, 74);
+    font-size: 20px; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.product{
+    border: 1px solid #e7e7e7;
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px;
+    position: relative;
+    height: 480px;
+    width: 350px;
+}
+
+.small-title—click{
+    color:rgb(58, 149, 107);
+    text-decoration: underline; 
+    font-size: 18px; 
+}
+
 .navbar-brand:focus{
     text-decoration: none;
 }
@@ -114,6 +158,12 @@ body{
 .btn-primary{
     color: rgb(255, 255, 255);
     background: rgb(79, 191, 168);
+    border-color: rgb(65, 179, 156);
+}
+
+.btn-primary:hover{
+    color: rgb(255, 255, 255);
+    background: rgb(41, 114, 99);
     border-color: rgb(65, 179, 156);
 }
 #search .navbar-form{

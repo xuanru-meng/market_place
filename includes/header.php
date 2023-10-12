@@ -47,17 +47,17 @@ include("functions/functions.php");
            
            <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
 
-                <a href="index.php" class="top_button right">
-                    <img src="images/shop.svg" height=50 width=50 alt="shop img">
-                </a>
+                <button onclick = "redirectToShop()" class="top_button right">
+                    <img src="images/shop.svg" height=40 width=40 alt="shop img">
+                </button>
 
-               <a href="customer/customer_login.php" class="top_button right">
-                    <img src="images/person.svg" height=50 width=50 alt="person img">
-                </a>
+               <button onclick = "redirectToLogin()" class="top_button right">
+                    <img src="images/person.svg" height=40 width=40 alt="person img">
+                </button>
 
-                <a href="cart.php" class="top_button right">
-                    <img src="images/cart.svg"  height=50 width=50 alt="cart img">
-                </a>
+                <button onclick = "redirectToCart()" class="top_button right">
+                    <img src="images/cart.svg"  height=40 width=40 alt="cart img">
+                </button>
                
                <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
                    
@@ -71,7 +71,7 @@ include("functions/functions.php");
                
                <div class="collapse clearfix" id="search"><!-- collapse clearfix Begin -->
                    
-                   <form method="get" action="results.php" class="navbar-form"><!-- navbar-form Begin -->
+                   <form method="get" action="shop.php" class="navbar-form"><!-- navbar-form Begin -->
                        
                        <div class="input-group"><!-- input-group Begin -->
                            
@@ -98,3 +98,21 @@ include("functions/functions.php");
        </div><!-- container Finish -->
        
    </div><!-- navbar navbar-default Finish -->
+
+    <script>
+        function redirectToLogin() {
+            var url = "customer_login.php";
+            window.location.href = url;
+        }
+
+        function redirectToShop() {
+            var url = "index.php";
+            window.location.href = url;
+        }
+
+        function redirectToCart() {
+            var url = "cart.php";
+            window.location.href = url;
+        }
+    </script>
+</body>

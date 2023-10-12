@@ -79,7 +79,10 @@
         </script> -->
 
     <div id="wrapper">
-       <?php include("includes/sidebar.php"); ?>
+       <?php 
+                include("includes/header.php"); 
+                // include("includes/sidebar.php"); 
+        ?>
        
         <div id="page-wrapper">
             <div class="container-fluid">
