@@ -1,10 +1,6 @@
 <?php 
 
-    if(!isset($_SESSION['admin_email'])){
-        
-        echo "<script>window.open('login.php','_self')</script>";
-        
-    }else{
+include("login_check.php");
 
 ?>
 
@@ -453,4 +449,4 @@ if(isset($_POST['update'])){
 ?>
 
 
-<?php } ?>
+<?php  ?>

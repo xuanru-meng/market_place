@@ -1,10 +1,6 @@
 <?php 
 
-    if(!isset($_SESSION['admin_email'])){
-        
-        echo "<script>window.open('login.php','_self')</script>";
-        
-    }else{
+include("login_check.php");
 
 ?>
 
@@ -302,6 +298,7 @@
 <?php 
 
 if(isset($_POST['submit'])){
+
     
     $product_title = $_POST['product_title'];
     $product_cat = $_POST['product_cat'];
@@ -320,7 +317,8 @@ if(isset($_POST['submit'])){
     $temp_name1 = $_FILES['product_img1']['tmp_name'];
     $temp_name2 = $_FILES['product_img2']['tmp_name'];
     $temp_name3 = $_FILES['product_img3']['tmp_name'];
-    
+
+
     move_uploaded_file($temp_name1,"product_images/$product_img1");
     move_uploaded_file($temp_name2,"product_images/$product_img2");
     move_uploaded_file($temp_name3,"product_images/$product_img3");
@@ -341,4 +339,4 @@ if(isset($_POST['submit'])){
 ?>
 
 
-<?php } ?>
+<?php ?>
