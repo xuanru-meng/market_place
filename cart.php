@@ -151,7 +151,26 @@
 
                            
                        </div><!-- table-responsive Finish -->
-                       
+                       <div class="box-footer"><!-- box-footer Begin -->
+                           
+                           
+                           <div class="pull-right"><!-- pull-right Begin -->
+                               
+                               <button type="submit" name="update" value="Update Cart" class="btn btn-default"><!-- btn btn-default Begin -->
+                                   
+                                   <i class="fa fa-refresh"></i> Update Cart
+                                   
+                               </button><!-- btn btn-default Finish -->
+                               
+                               <a href="checkout.php" class="btn btn-primary">
+                                   
+                                   Proceed Checkout <i class="fa fa-chevron-right"></i>
+                                   
+                               </a>
+                               
+                           </div><!-- pull-right Finish -->
+                           
+                       </div><!-- box-footer Finish -->
                        
                    </form><!-- form Finish -->
                    
@@ -275,26 +294,7 @@
                            
                            <tbody><!-- tbody Begin -->
                                
-                               <tr><!-- tr Begin -->
-                                   
-                                   <td> Order All Sub-Total </td>
-                                   <th> $<?php echo $total; ?> </th>
-                                   
-                               </tr><!-- tr Finish -->
                                
-                               <tr><!-- tr Begin -->
-                                   
-                                   <td> Shipping and Handling </td>
-                                   <td> $0 </td>
-                                   
-                               </tr><!-- tr Finish -->
-                               
-                               <tr><!-- tr Begin -->
-                                   
-                                   <td> Tax </td>
-                                   <th> $0 </th>
-                                   
-                               </tr><!-- tr Finish -->
                                
                                <tr class="total"><!-- tr Begin -->
                                    

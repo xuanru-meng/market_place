@@ -20,7 +20,7 @@
             
         </div>
    
-  <form method="post" action="checkout.php"><!-- form Begin -->
+  <form method="post" action="index.php"><!-- form Begin -->
       
       <div class="form-group"><!-- form-group Begin -->
           
@@ -40,7 +40,7 @@
       
       <div class="text-center"><!-- text-center Begin -->
           
-          <button name="login" value="Login" class="btn btn-primary">
+          <button name="login" value="login" class="btn btn-primary" type="submit">
               
               <i class="fa fa-sign-in" style="color: #9FD4A3;"></i> Login
               
@@ -69,10 +69,9 @@
 
 <?php 
 
-echo "<script>    console.log('hello'); </script>";
 
 if(isset($_POST['login'])){
-
+    // echo "<script>    console.log('hhh---'); </script>";
     $customer_email = $_POST['c_email'];
     
     $customer_pass = $_POST['c_pass'];
