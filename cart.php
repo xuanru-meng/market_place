@@ -149,47 +149,9 @@
                                
                            </table><!-- table Finish -->
 
-                           <div class="form-inline pull-right"><!-- form-inline Begin -->
-                               <div class="form-group"><!-- form-group Begin -->
-
-                                    <label> Coupon Code: </label>
-                                    <input type="text" name="code" class="form-control">
-                                    <input type="submit" class="btn btn-primary" value="Use Coupon" name="apply_coupon">
-                               
-                               </div><!-- form-group Finish -->
-                           </div><!-- form-inline Finish -->
                            
                        </div><!-- table-responsive Finish -->
                        
-                       <div class="box-footer"><!-- box-footer Begin -->
-                           
-                           <div class="pull-left"><!-- pull-left Begin -->
-                               
-                               <a href="index.php" class="btn btn-default"><!-- btn btn-default Begin -->
-                                   
-                                   <i class="fa fa-chevron-left"></i> Continue Shopping
-                                   
-                               </a><!-- btn btn-default Finish -->
-                               
-                           </div><!-- pull-left Finish -->
-                           
-                           <div class="pull-right"><!-- pull-right Begin -->
-                               
-                               <button type="submit" name="update" value="Update Cart" class="btn btn-default"><!-- btn btn-default Begin -->
-                                   
-                                   <i class="fa fa-refresh"></i> Update Cart
-                                   
-                               </button><!-- btn btn-default Finish -->
-                               
-                               <a href="checkout.php" class="btn btn-primary">
-                                   
-                                   Proceed Checkout <i class="fa fa-chevron-right"></i>
-                                   
-                               </a>
-                               
-                           </div><!-- pull-right Finish -->
-                           
-                       </div><!-- box-footer Finish -->
                        
                    </form><!-- form Finish -->
                    
@@ -288,141 +250,6 @@
                
                ?>
                
-               <div id="row same-heigh-row"><!-- #row same-heigh-row Begin -->
-                   <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Begin -->
-                       <div class="box same-height headline"><!-- box same-height headline Begin -->
-                           <h3 class="text-center">Products You Maybe Like</h3>
-                       </div><!-- box same-height headline Finish -->
-                   </div><!-- col-md-3 col-sm-6 Finish -->
-                   
-                   <?php 
-                   
-                   $get_products = "select * from products order by rand() LIMIT 0,3";
-                   
-                   $run_products = mysqli_query($con,$get_products);
-                   
-                   while($row_products=mysqli_fetch_array($run_products)){
-                       
-                    $pro_id = $row_products['product_id'];
-        
-                    $pro_title = $row_products['product_title'];
-                    
-                    $pro_price = $row_products['product_price'];
-            
-                    $pro_sale_price = $row_products['product_sale'];
-                    
-                    $pro_img1 = $row_products['product_img1'];
-                    
-                    $pro_label = $row_products['product_label'];
-                    
-                    $manufacturer_id = $row_products['manufacturer_id'];
-            
-                    $get_manufacturer = "select * from manufacturers where manufacturer_id='$manufacturer_id'";
-            
-                    $run_manufacturer = mysqli_query($db,$get_manufacturer);
-            
-                    $row_manufacturer = mysqli_fetch_array($run_manufacturer);
-            
-                    $manufacturer_title = $row_manufacturer['manufacturer_title'];
-            
-                    if($pro_label == "sale"){
-            
-                        $product_price = " <del> $ $pro_price </del> ";
-            
-                        $product_sale_price = "/ $ $pro_sale_price ";
-            
-                    }else{
-            
-                        $product_price = "  $ $pro_price  ";
-            
-                        $product_sale_price = "";
-            
-                    }
-            
-                    if($pro_label == ""){
-            
-                    }else{
-            
-                        $product_label = "
-                        
-                            <a href='#' class='label $pro_label'>
-                            
-                                <div class='theLabel'> $pro_label </div>
-                                <div class='labelBackground'>  </div>
-                            
-                            </a>
-                        
-                        ";
-            
-                    }
-                    
-                    echo "
-                    
-                    <div class='col-md-3 col-sm-6 center-responsive'>
-                    
-                        <div class='product'>
-                        
-                            <a href='details.php?pro_id=$pro_id'>
-                            
-                                <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-                            
-                            </a>
-                            
-                            <div class='text'>
-            
-                            <center>
-                            
-                                <p class='btn btn-primary'> $manufacturer_title </p>
-                            
-                            </center>
-                            
-                                <h3>
-                        
-                                    <a href='details.php?pro_id=$pro_id'>
-            
-                                        $pro_title
-            
-                                    </a>
-                                
-                                </h3>
-                                
-                                <p class='price'>
-                                
-                                $product_price &nbsp;$product_sale_price
-                                
-                                </p>
-                                
-                                <p class='button'>
-                                
-                                    <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-            
-                                        View Details
-            
-                                    </a>
-                                
-                                    <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-            
-                                        <i class='fa fa-shopping-cart'></i> Add to Cart
-            
-                                    </a>
-                                
-                                </p>
-                            
-                            </div>
-            
-                            $product_label
-                        
-                        </div>
-                    
-                    </div>
-                    
-                    ";
-                       
-                   }
-                   
-                   ?>
-                   
-               </div><!-- #row same-heigh-row Finish -->
                
            </div><!-- col-md-9 Finish -->
            
@@ -489,11 +316,6 @@
        </div><!-- container Finish -->
    </div><!-- #content Finish -->
    
-   <?php 
-    
-    include("includes/footer.php");
-    
-    ?>
     
     <script src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script>

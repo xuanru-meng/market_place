@@ -21,51 +21,18 @@
        
        <div class="container"><!-- container Begin -->
            
-           <div class="navbar-header"><!-- navbar-header Begin -->
-               
-               
-               <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-                   
-                   <span class="sr-only">Toggle Navigation</span>
-                   
-                   <i class="fa fa-align-justify"></i>
-                   
-               </button>
-
-               
-               <button class="navbar-toggle" data-toggle="collapse" data-target="#search">
-                   
-                   <span class="sr-only">Toggle Search</span>
-                   
-                   <i class="fa fa-search"></i>
-                   
-               </button>
-               
-           </div><!-- navbar-header Finish -->
            
            <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
 
-                <button onclick = "redirectToShop()" class="top_button right">
-                    <img src="images/shop.svg" height=40 width=40 alt="shop img">
+                <button onclick = "redirectToDashboard()" class="top_button right">
+                    <img src="other_images/dashboard.svg" height=40 width=40 alt="shop img">
                 </button>
 
                <button onclick = "redirectToLogin()" class="top_button right">
-                    <img src="images/person.svg" height=40 width=40 alt="person img">
+                    <img src="other_images/person.svg" height=40 width=40 alt="person img">
                 </button>
 
-                <button onclick = "redirectToCart()" class="top_button right">
-                    <img src="images/cart.svg"  height=40 width=40 alt="cart img">
-                </button>
                
-               <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
-                   
-                   <button class="top_button right" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
-                        <img src="images/search.svg" height=40 width=40 alt="search img">
-                       <span class="sr-only">Toggle Search</span>
-                       
-                   </button><!-- btn btn-primary navbar-btn Finish -->
-                   
-               </div><!-- navbar-collapse collapse right Finish -->
                
                <div class="collapse clearfix" id="search"><!-- collapse clearfix Begin -->
                    
@@ -98,19 +65,15 @@
    </div><!-- navbar navbar-default Finish -->
 
     <script>
+        function redirectToDashboard() {
+            var url = "index.php?dashboard";
+            window.location.href = url;
+        }
+
         function redirectToLogin() {
-            var url = "customer_login.php";
+            var url = "index.php?user_profile=<?php echo $admin_id; ?>";
             window.location.href = url;
         }
 
-        function redirectToShop() {
-            var url = "index.php";
-            window.location.href = url;
-        }
-
-        function redirectToCart() {
-            var url = "cart.php";
-            window.location.href = url;
-        }
     </script>
 </body>

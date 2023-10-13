@@ -1,10 +1,6 @@
 <?php 
 
-    if(!isset($_SESSION['admin_email'])){
-        
-        echo "<script>window.open('login.php','_self')</script>";
-        
-    }else{
+    include("login_check.php");
 
 ?>
    
@@ -42,23 +38,6 @@
 
 ?>
     
-<div class="row"><!-- row Begin -->
-    
-    <div class="col-lg-12"><!-- col-lg-12 Begin -->
-        
-        <ol class="breadcrumb"><!-- breadcrumb Begin -->
-            
-            <li class="active"><!-- active Begin -->
-                
-                <i class="fa fa-dashboard"></i> Dashboard / Edit User
-                
-            </li><!-- active Finish -->
-            
-        </ol><!-- breadcrumb Finish -->
-        
-    </div><!-- col-lg-12 Finish -->
-    
-</div><!-- row Finish -->
        
 <div class="row"><!-- row Begin -->
     
@@ -184,7 +163,7 @@
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
-                          <input name="update" value="Update User" type="submit" class="btn btn-primary form-control">
+                          <input name="update" value="Update User" type="submit" style="background-color:#5da65d;"class="btn btn-primary form-control">
                           
                       </div><!-- col-md-6 Finish -->
                        
@@ -236,4 +215,4 @@ if(isset($_POST['update'])){
 ?>
 
 
-<?php } ?>
+<?php ?>

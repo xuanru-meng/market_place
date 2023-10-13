@@ -69,6 +69,7 @@
 
 <?php 
 
+echo "<script>    console.log('hello'); </script>";
 
 if(isset($_POST['login'])){
 
@@ -79,10 +80,10 @@ if(isset($_POST['login'])){
     $select_customer = "select * from customers where customer_email='$customer_email' AND customer_pass='$customer_pass'";
 
     $run_customer = mysqli_query($con,$select_customer);
-    // if (!$run_customer) {
-    //     echo "<script>alert(${run_customer})</script>"; 
-    //     exit();
-    // }
+    if (!$run_customer) {
+        echo "<script>alert(${run_customer})</script>"; 
+        exit();
+    }
 
     $get_ip = getRealIpUser();
 
@@ -93,6 +94,7 @@ if(isset($_POST['login'])){
     $run_cart = mysqli_query($con,$select_cart);
     
     $check_cart = mysqli_num_rows($run_cart);
+    echo "<script>    console.log($check_customer); </script>";
 
     if($check_customer==0){
         

@@ -58,7 +58,23 @@
         $count_pending_orders = mysqli_num_rows($run_pending_orders);
 
 ?>
+<?php 
+        include("includes/header.php"); 
+        echo '<script>
+        function continuousScript() {
+            let value = window.scrollY;
+            let leaves = document.querySelectorAll(".leaf"); 
+            leaves.forEach(function(leaf, index) {
+                leaf.style.left = (2 * value + index * 400) + "px"; 
+                leaf.style.top = (value * 2) + "px";
+            });
+        }
+        window.addEventListener("scroll", continuousScript);
+        setInterval(continuousScript, 1000); // 
+    </script>
+    ';
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,22 +85,28 @@
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-        <!-- <script>
-                alert("Hello, World!");
-                window.addEventListener("load", function(){
-                let value = window.scrollY;
-                console.log(value);
-                });
-        </script> -->
+<section>
 
-    <div id="wrapper">
-       <?php 
-                include("includes/header.php"); 
-                // include("includes/sidebar.php"); 
-        ?>
-       
-        <div id="page-wrapper">
+<!-- <style>
+    section {
+        display: flex;
+        justify-content: space-between; /* 该属性将元素水平分布 */
+        position: relative; /* 设置为 relative 允许子元素使用 absolute 定位 */
+        height: 50px; /* 因为叶子是绝对定位的，所以给 section 一些高度 */
+    }
+</style> -->
+<?php 
+        for ($i = 0; $i < 1; $i++) {
+            echo '<img src="other_images/leaf.svg" class="leaf" style="width: 100px; position: absolute;opacity: 0.5; ">';
+        }
+    ?>
+</section>
+
+<link rel="stylesheet" href="styles/bootstrap-337.min.css">
+<link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles/style.css">
+<body>
+       <div class = "main">
             <div class="container-fluid">
                 
                 <?php
@@ -173,12 +195,10 @@
         
                 ?>
                 
-            </div><!-- container-fluid finish -->
-        </div><!-- #page-wrapper finish -->
-    </div>
+            </div>
+            </div>
 
-<!-- <script src="js/jquery-331.min.js"></script>     
-<script src="js/bootstrap-337.min.js"></script>   -->
+
 
 </body>
 </html>
